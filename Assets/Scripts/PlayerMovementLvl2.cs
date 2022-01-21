@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementLvl2 : MonoBehaviour
 {
-    public float 
-        speed,Score;
+    public float
+        speed, Score;
 
     Rigidbody PlayerRigidBody;
 
     public Text ScoreText;
-   
+
     void Start()
     {
         PlayerRigidBody = GetComponent<Rigidbody>();
@@ -26,22 +26,22 @@ public class PlayerMovement : MonoBehaviour
         transform.position += new Vector3(moveHorizontal, 0, moveVertical) * Time.deltaTime * speed;
     }
 
-    void Update()   
+    void Update()
     {
         ScoreText.text = "Score : " + Score;
 
         if (Score == 5)
-            SceneManager.LoadScene("Gameplay_Level2");
+            SceneManager.LoadScene("GameWin");
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Coin"))
+        if (collision.gameObject.CompareTag("Coin"))
         {
             Score += 1;
             Destroy(collision.gameObject);
         }
-        if(collision.gameObject.CompareTag("Hazard"))
+        if (collision.gameObject.CompareTag("Hazard"))
         {
             SceneManager.LoadScene("GameLose");
         }
