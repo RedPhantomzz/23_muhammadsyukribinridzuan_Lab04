@@ -23,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
-        transform.position += new Vector3(moveHorizontal, 0, moveVertical) * Time.deltaTime * speed;
+        //transform.position += new Vector3(moveHorizontal, 0, moveVertical) * Time.deltaTime * speed;
+        PlayerRigidBody.AddForce(movement * speed * Time.deltaTime);
     }
 
     void Update()   

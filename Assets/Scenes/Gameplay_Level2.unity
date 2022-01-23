@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8cd9c88ffa11f419ba32fce5a0f63e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 100
   Score: 0
   ScoreText: {fileID: 1962201734}
 --- !u!4 &658988740 stripped
@@ -1551,6 +1551,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1563123908373273794, guid: 232a60fde40e6b045997a8bbb5f10f09,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563123908373273794, guid: 232a60fde40e6b045997a8bbb5f10f09,
+        type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563123908373273794, guid: 232a60fde40e6b045997a8bbb5f10f09,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1563123908373273795, guid: 232a60fde40e6b045997a8bbb5f10f09,
         type: 3}
       propertyPath: m_Name
