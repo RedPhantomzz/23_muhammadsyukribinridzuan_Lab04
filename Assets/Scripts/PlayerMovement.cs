@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody PlayerRigidBody;
 
     public Text ScoreText;
+    public Text TimerTxt;
+    float Timer = 30f;
 
     Scene CurrentScene;
    
@@ -37,6 +39,13 @@ public class PlayerMovement : MonoBehaviour
             SceneManager.LoadScene("Gameplay_Level2");
         else if (Score == 5 && CurrentScene.name == "Gameplay_Level2")
             SceneManager.LoadScene("GameWin");
+
+        TimerTxt.text = "Timer: " + Timer.ToString("0");
+        Timer -= Time.deltaTime;
+        if(Timer <=0)
+        {
+            SceneManager.LoadScene("GameLose");
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
