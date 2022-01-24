@@ -228,7 +228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -303.3, y: 99.7}
+  m_AnchoredPosition: {x: -277.1, y: 184.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &194392697
@@ -273,7 +273,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -465,28 +465,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 398489140}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &649753948 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1563123908373273795, guid: 232a60fde40e6b045997a8bbb5f10f09,
-    type: 3}
-  m_PrefabInstance: {fileID: 1563123908422931451}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &649753949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649753948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb22b5e6c353a6c4081ad401c6103560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 100
-  Score: 0
-  ScoreText: {fileID: 1962201734}
-  TimerTxt: {fileID: 194392698}
 --- !u!4 &649753954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1563123908373273798, guid: 232a60fde40e6b045997a8bbb5f10f09,
@@ -1603,7 +1581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: 104.9}
+  m_AnchoredPosition: {x: -6, y: 184.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1962201734
@@ -1769,21 +1747,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1563123908373273794, guid: 232a60fde40e6b045997a8bbb5f10f09,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1563123908373273794, guid: 232a60fde40e6b045997a8bbb5f10f09,
-        type: 3}
-      propertyPath: m_Drag
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1563123908373273794, guid: 232a60fde40e6b045997a8bbb5f10f09,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 649753949, guid: 232a60fde40e6b045997a8bbb5f10f09, type: 3}
+      propertyPath: ScoreText
+      value: 
+      objectReference: {fileID: 1962201734}
+    - target: {fileID: 649753949, guid: 232a60fde40e6b045997a8bbb5f10f09, type: 3}
+      propertyPath: TimerTxt
+      value: 
+      objectReference: {fileID: 194392698}
     - target: {fileID: 1563123908373273795, guid: 232a60fde40e6b045997a8bbb5f10f09,
         type: 3}
       propertyPath: m_Name

@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public Text ScoreText;
     public Text TimerTxt;
     float Timer = 30f;
+    public GameObject CoinParticle;
 
     Scene CurrentScene;
    
@@ -33,31 +34,50 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()   
     {
-        ScoreText.text = "Score : " + Score;
+        ScoreText.text = "Score : " + Score.ToString();
 
+        // Lvl 1 Win Condition
         if (Score == 5 && CurrentScene.name == "Gameplay_Level1")
             SceneManager.LoadScene("Gameplay_Level2");
+
+        // Lvl 2 Win Condition
         else if (Score == 5 && CurrentScene.name == "Gameplay_Level2")
+            SceneManager.LoadScene("Gameplay_Level3");
+
+        // Lvl 3 Win Condition
+        else if (Score == 5 && CurrentScene.name == "Gamplay_Level3")
             SceneManager.LoadScene("GameWin");
 
-        TimerTxt.text = "Timer: " + Timer.ToString("0");
-        Timer -= Time.deltaTime;
-        if(Timer <=0)
+        // For the timer in Lvl 3
+        if (CurrentScene.name == "Gameplay_Level3")
+        {
+            TimerTxt.text = "Timer: " + Timer.ToString("0");
+            Timer -= Time.deltaTime;
+            if (Timer <= 0)
+            {
+                SceneManager.LoadScene("GameLose");
+            }
+        }
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Lose condition
+        if(collision.gameObject.CompareTag("Hazard"))
         {
             SceneManager.LoadScene("GameLose");
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.CompareTag("Coin"))
+        // Collecting coins
+        if (other.gameObject.tag == "Coin")
         {
+            Instantiate(CoinParticle, transform.position, transform.rotation);
             Score += 1;
-            Destroy(collision.gameObject);
-        }
-        if(collision.gameObject.CompareTag("Hazard"))
-        {
-            SceneManager.LoadScene("GameLose");
+            Destroy(other.gameObject);
         }
     }
 }
