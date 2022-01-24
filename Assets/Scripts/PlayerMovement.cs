@@ -12,10 +12,13 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody PlayerRigidBody;
 
     public Text ScoreText;
+
+    Scene CurrentScene;
    
     void Start()
     {
         PlayerRigidBody = GetComponent<Rigidbody>();
+        CurrentScene = SceneManager.GetActiveScene();
     }
 
     void FixedUpdate()
@@ -23,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
-        //transform.position += new Vector3(moveHorizontal, 0, moveVertical) * Time.deltaTime * speed;
         PlayerRigidBody.AddForce(movement * speed * Time.deltaTime);
     }
 
@@ -31,8 +33,10 @@ public class PlayerMovement : MonoBehaviour
     {
         ScoreText.text = "Score : " + Score;
 
-        if (Score == 5)
+        if (Score == 5 && CurrentScene.name == "Gameplay_Level1")
             SceneManager.LoadScene("Gameplay_Level2");
+        else if (Score == 5 && CurrentScene.name == "Gameplay_Level2")
+            SceneManager.LoadScene("GameWin");
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -21,7 +21,7 @@ public class MovingHazard : MonoBehaviour
     void Update()
     {
         currentPosition = transform.position.x;
-        Limit = 2.8f;
+        Limit = 1.5f;
 
         if (currentPosition < Limit && LimitReached)
         {
