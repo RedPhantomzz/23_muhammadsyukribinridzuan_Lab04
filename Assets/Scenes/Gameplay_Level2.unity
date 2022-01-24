@@ -1571,20 +1571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1563123908373273797, guid: 232a60fde40e6b045997a8bbb5f10f09,
-        type: 3}
-      propertyPath: speed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1563123908373273797, guid: 232a60fde40e6b045997a8bbb5f10f09,
-        type: 3}
-      propertyPath: ScoreText
-      value: 
-      objectReference: {fileID: 1962201734}
     - target: {fileID: 1563123908373273798, guid: 232a60fde40e6b045997a8bbb5f10f09,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.92
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1563123908373273798, guid: 232a60fde40e6b045997a8bbb5f10f09,
         type: 3}
@@ -1594,7 +1584,7 @@ PrefabInstance:
     - target: {fileID: 1563123908373273798, guid: 232a60fde40e6b045997a8bbb5f10f09,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.53
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 1563123908373273798, guid: 232a60fde40e6b045997a8bbb5f10f09,
         type: 3}
@@ -1636,8 +1626,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1563123908373273797, guid: 232a60fde40e6b045997a8bbb5f10f09, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 232a60fde40e6b045997a8bbb5f10f09, type: 3}
 --- !u!1001 &3301920317456962951
 PrefabInstance:
@@ -1774,11 +1763,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6747347534626654497, guid: c311612705074b047a2e0fb7b98785e1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.050000004
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c311612705074b047a2e0fb7b98785e1, type: 3}
